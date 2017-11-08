@@ -71,10 +71,12 @@
     idea()
   });
 
-jQuery("#responsive_headline").fitText(0.9);
+jQuery("#responsive_headline").fitText(0.72);
 jQuery("#responsive_headline").fitText(0.72);
 
-
+$(document).ready(function(){
+  $( ".slider_title" ).css("font-size", "100px");
+})
 
 
 })(jQuery);
