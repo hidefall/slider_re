@@ -71,7 +71,7 @@
     idea()
   });
 
-jQuery("#responsive_headline").fitText(1.9);
+jQuery("#responsive_headline").fitText(0.9);
 jQuery("#responsive_headline").fitText(0.72);
 
 
