@@ -27,7 +27,12 @@
 
       // Resizer() resizes items based on the object width divided by the compressor * 10
       var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        if($(window).width() > $(window).height()){
+          $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        }else{
+          $this.css('font-size', Math.max(Math.min($this.width() / 2 / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+        }
+        console.log(settings.maxFontSize + '---' + $this.width());
       };
 
       // Call once to set.
@@ -37,7 +42,6 @@
       $(window).on('resize.fittext load.fittext orientationchange.fittext', resizer);
 
     });
-
   };
 
 })( jQuery );

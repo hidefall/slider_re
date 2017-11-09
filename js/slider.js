@@ -13,7 +13,7 @@
     var count = $('.slider').children().length;
 
     function childs(){
-      console.log(current_slide)
+      // console.log(current_slide)
       slides.each(function(el){
       if(current_slide == el){
         $(this).children().fadeTo(1000,1)  
@@ -24,16 +24,16 @@
     }
 
     function nextSlide(){
-      console.log(current_slide)
+      // console.log(current_slide)
       current_slide +=1  
       childs()
     }
     setInterval(function(){
       nextSlide()  
-      console.log(current_slide)
+      // console.log(current_slide)
       if(current_slide == (count - 1)){
         current_slide = 0-1
-        console.log(current_slide)
+        // console.log(current_slide)
       }
     }, 3000)
     
@@ -62,7 +62,7 @@
       2 - bw, 'left':-(wh/2 - bw)})
     $('.slide_title_border').width(wh);
     $('.slide_title_border').width($('.slide_title_border').width() - bw*2)
-    console.log($('.slide_title_border').width() + "---" + $('.slide_title_border').height()) ;
+    // console.log($('.slide_title_border').width() + "---" + $('.slide_title_border').height()) ;
   }
   $(document).ready(function(){
     idea()
