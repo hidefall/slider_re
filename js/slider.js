@@ -56,7 +56,7 @@
 
   function idea(){
     var wh = $(window).height();
-    var bw = parseInt($('.slide_title_border').css('border-left-width'));
+    var bw = parseInt($('.slide_title_border').css('border-left-width')) + 40;
 
     $('.slide_title_border').css({'top':wh/
       2 - bw, 'left':-(wh/2 - bw)})
@@ -78,5 +78,7 @@ $(document).ready(function(){
   $( ".slider_title" ).css("font-size", "105px");
 })
 
+var offset = $('.slide_title_border').offset();
+$('.slider_title').centerTo(offset.left,offset.top);
 
 })(jQuery);
