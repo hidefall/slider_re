@@ -71,8 +71,8 @@
     idea()
   });
 
-jQuery("#responsive_headline").fitText(0.76);
-jQuery("#responsive_headline").fitText(0.76);
+jQuery("#responsive_headline").fitText(0.68);
+jQuery("#responsive_headline").fitText(0.68);
 
 $(document).ready(function(){
   $( ".slider_title" ).css("font-size", "105px");
